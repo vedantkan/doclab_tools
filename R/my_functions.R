@@ -20,7 +20,7 @@ gose_func <- function(data){
     select(-gose, -follow_up_period.factor) %>%
     distinct() %>%
     ungroup() %>%
-    mutate(best_gose = pmax(discharge_gose, gose_3m, gose_6m, gose_12, gose_ot, na.rm = TRUE))
+    mutate(best_gose = pmax(discharge_gose, gose_3m, gose_6m, gose_12m, gose_ot, na.rm = TRUE))
 
   return(df)
 }
