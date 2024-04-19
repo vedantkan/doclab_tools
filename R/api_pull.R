@@ -1,6 +1,6 @@
 library(tidyverse)
 
-pull_redcap_data <- function(data = "reconfig"){
+pull_redcap_data <- function(token, url){
 
   ### Pulling raw data
   formData_raw <- list("token"=token,
