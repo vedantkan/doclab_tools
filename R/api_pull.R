@@ -3,6 +3,7 @@ library(tidyverse)
 pull_redcap_data <- function(token, url){
 
   ### Pulling raw data
+  require(tidyverse)
   formData_raw <- list("token"=token,
                        content='record',
                        action='export',

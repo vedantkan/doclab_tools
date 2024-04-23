@@ -9,17 +9,20 @@
 The function is used to pull live redcap data
 }
 \usage{
-pull_redcap_data(data)
+pull_redcap_data(token, url)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{data}{
-  Mention from which databse you want to pull the data
-  1 - "consciousness" (default)
-  2 - "reconfig"
-  3 - "aphasia"
+  \item{token}{
+  Give the token for databse you want to pull the data (consciousness, reconfig, aphasia)
 %%     ~~Describe \code{x} here~~
 }
+
+  \item{url}{
+  Mention the redcap url
+%%     ~~Describe \code{x} here~~
+}
+
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~

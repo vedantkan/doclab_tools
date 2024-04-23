@@ -3,6 +3,8 @@ library(tidyverse)
 ### Function to get gose from all the data
 
 gose_func <- function(data){
+  require(tidyverse)
+  data <- tibble::as_tibble(data)
   df <- data %>%
     select(record_id, wlst, discharge_gose, follow_up_period.factor, gose) %>%
     group_by(record_id) %>%
@@ -27,6 +29,8 @@ gose_func <- function(data){
 
 
 mrs_func <- function(data){
+  require(tidyverse)
+  data <- tibble::as_tibble(data)
   df <- data %>%
     select(record_id, wlst, discharge_mrs, follow_up_period.factor, mrs) %>%
     group_by(record_id) %>%
@@ -51,6 +55,9 @@ mrs_func <- function(data){
 
 
 command_score_func <- function(data, date = "test_datetime", time = "test_datetime", type = "all"){
+
+  require(tidyverse)
+  data <- tibble::as_tibble(data)
 
   if(date == time){
     df <- data %>%
@@ -97,6 +104,9 @@ command_score_func <- function(data, date = "test_datetime", time = "test_dateti
 
 
 crsr_func <- function(data, date = "test_datetime", time = "test_datetime", type = "all"){
+
+  require(tidyverse)
+  data <- tibble::as_tibble(data)
 
   if(date == time){
     df <- data %>%
@@ -157,6 +167,9 @@ crsr_func <- function(data, date = "test_datetime", time = "test_datetime", type
 }
 
 demo_func <- function(data, database = "consciousness"){
+
+  require(tidyverse)
+  data <- tibble::as_tibble(data)
 
   if(database == "consciousness"){
     etiology <- "primary_adm_dx"
