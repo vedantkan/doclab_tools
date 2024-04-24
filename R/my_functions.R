@@ -180,7 +180,8 @@ demo_func <- function(data, database = "consciousness"){
 
   df <- data %>%
     select(record_id, dob, sex.factor, race.factor, handedness.factor, years_of_education.factor,
-           primary_adm_dx_onset, (ends_with("_date") & contains(c("hosp", "icu"))), !!sym(etiology) ) %>%
+           primary_adm_dx_onset, (ends_with("_date") & contains(c("hosp", "icu"))), !!sym(etiology),
+           gcs_tot_adm) %>%
     group_by(record_id) %>%
     fill(all_of(colnames(.)[-1])) %>%
     distinct() %>%
