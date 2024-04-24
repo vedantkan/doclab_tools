@@ -7,10 +7,10 @@ gose_func <- function(data){
   data <- tibble::as_tibble(data)
   df <- data %>%
     select(record_id, wlst, discharge_gose, follow_up_period.factor, gose) %>%
+    filter(!(is.na(follow_up_period.factor) & is.na(gose) & is.na(wlst) & is.na(discharge_gose) )) %>%
     group_by(record_id) %>%
     fill(discharge_gose, .direction = "updown") %>%
     fill(wlst, .direction = "updown") %>%
-    filter(!(is.na(follow_up_period.factor) & is.na(gose))) %>%
     mutate(gose_3m = ifelse(follow_up_period.factor == "3 Month", gose, NA),
            gose_6m = ifelse(follow_up_period.factor == "6 Month", gose, NA),
            gose_12m = ifelse(follow_up_period.factor == "12 Month", gose, NA),
@@ -33,10 +33,10 @@ mrs_func <- function(data){
   data <- tibble::as_tibble(data)
   df <- data %>%
     select(record_id, wlst, discharge_mrs, follow_up_period.factor, mrs) %>%
+    filter(!(is.na(follow_up_period.factor) & is.na(gose) & is.na(wlst) & is.na(discharge_gose) )) %>%
     group_by(record_id) %>%
     fill(discharge_mrs, .direction = "updown") %>%
     fill(wlst, .direction = "updown") %>%
-    filter(!(is.na(follow_up_period.factor) & is.na(mrs))) %>%
     mutate(mrs_3m = ifelse(follow_up_period.factor == "3 Month", mrs, NA),
            mrs_6m = ifelse(follow_up_period.factor == "6 Month", mrs, NA),
            mrs_12m = ifelse(follow_up_period.factor == "12 Month", mrs, NA),
