@@ -8,12 +8,13 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-mrs_func(x)
+mrs_func(data) Just provide the database from which you require the mrs data and the
+function will return all the mrs data
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{data}{
+Provide the default redcap data as it is.
 }
 }
 \details{

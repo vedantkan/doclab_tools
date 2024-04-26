@@ -5,16 +5,22 @@
 %%  ~~function to do ... ~~
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Get the deomgraphics data
 }
 \usage{
-demo_func(x)
+demo_func(data, database = "consciousness")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{data}{
+Give the data from which to pull the demogrpahics data
 }
+
+  \item{database}{
+Mention the name of the databse of which demographics is requires. Choose from reconfig/consciousness/aphasia.
+Default = "consciousnesss"
+}
+
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~

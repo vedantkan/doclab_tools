@@ -14,14 +14,12 @@ pull_redcap_data(token, url)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{token}{
-  Give the token for databse you want to pull the data (consciousness, reconfig, aphasia)
-%%     ~~Describe \code{x} here~~
-}
+  Give the token for databse you want to pull the data (consciousness/reconfig/aphasia)
+  }
 
   \item{url}{
   Mention the redcap url
-%%     ~~Describe \code{x} here~~
-}
+  }
 
 }
 \details{

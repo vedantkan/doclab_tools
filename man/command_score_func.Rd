@@ -8,12 +8,27 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-command_score_func(x)
+command_score_func(data, date = "test_datetime", time = "test_datetime", type = "all")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{data}{
+ The redcap database form which you want the Command score data
+}
+
+  \item{date}{
+ Mention the name of the date column as in the databse. Default = "test_datetime"
+}
+
+  \item{time}{
+ Mention the name of the time column as in the databse. Default = "test_datetime"
+}
+
+  \item{type}{
+ Choose form raw/yesno/all. Default = "raw".
+ raw returns the command score value at each timepoint for each patinet,
+ yesno returns binarized command_score=yes or command_scre=no for each patient,
+ all return both raw and yes/no binarized values.
 }
 }
 \details{

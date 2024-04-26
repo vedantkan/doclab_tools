@@ -5,16 +5,32 @@
 %%  ~~function to do ... ~~
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Function to get all the CRSR data for each patient
 }
 \usage{
-crsr_func(x)
+crsr_func(data, date = "test_datetime", time = "test_datetime", type = "all")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{data}{
+ The redcap database form which you want the CRSR data
 }
+
+  \item{date}{
+ Mention the name of the date column as in the databse. Default = "test_datetime"
+}
+
+  \item{time}{
+ Mention the name of the time column as in the databse. Default = "test_datetime"
+}
+
+  \item{type}{
+ Choose form raw/yesno/all. Default = "raw".
+ raw returns the crsr total value at each timepoint,
+ yesno returns binarized crsr=yes or crsr=no for each patient,
+ all return both raw and yes/no binarized values.
+}
+
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~

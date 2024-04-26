@@ -8,12 +8,13 @@
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
-gose_func(x)
+gose_func(data). Just provide the database from which you require the gose data and the
+function will return all the gose data
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{
-%%     ~~Describe \code{x} here~~
+  \item{data}{
+  Provide the default redcap data as it is.
 }
 }
 \details{
