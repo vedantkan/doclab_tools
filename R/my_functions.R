@@ -33,7 +33,7 @@ mrs_func <- function(data){
   data <- tibble::as_tibble(data)
   df <- data %>%
     select(record_id, wlst, discharge_mrs, follow_up_period.factor, mrs) %>%
-    filter(!(is.na(follow_up_period.factor) & is.na(gose) & is.na(wlst) & is.na(discharge_gose) )) %>%
+    filter(!(is.na(follow_up_period.factor) & is.na(mrs) & is.na(wlst) & is.na(discharge_mrs) )) %>%
     group_by(record_id) %>%
     fill(discharge_mrs, .direction = "updown") %>%
     fill(wlst, .direction = "updown") %>%
